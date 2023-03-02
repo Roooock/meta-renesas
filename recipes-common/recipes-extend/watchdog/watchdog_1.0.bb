@@ -8,7 +8,8 @@ LIC_FILES_CHKSUM = " \
 
 SYSTEMD_AUTO_ENABLE ?= "enable"
 SYSTEMD_SERVICE_${PN} = "watchdog.service"
-DEPENDS = "linux-renesas"
+#DEPENDS = "linux-renesas"
+DEPENDS = "linux-asus-renesas"
 
 FILES_${PN} += " \
         ${systemd_unitdir}/system/watchdog.service \

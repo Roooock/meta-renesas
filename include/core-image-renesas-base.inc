@@ -69,6 +69,10 @@ update_issue() {
       BSP_SOC="RZG2E"
       BSP_BOARD="EK874"
       ;;
+    rzfive-tinker-v)
+      BSP_SOC="RZFive"
+      BSP_BOARD="Tinker-V"
+      ;;
 
     esac
 
