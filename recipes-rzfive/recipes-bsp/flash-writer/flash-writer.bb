@@ -11,6 +11,7 @@ SRCREV = "68cb0875cfcc5c5295ad74e6b97798ba5fad8126"
 SRC_URI = " \
 	${FLASH_WRITER_URL};protocol=https;branch=${BRANCH} \
 	file://0001-makefile-use-default-build-setting.patch \
+	file://0002-flashwriter-ddr-support-Tinker-V.patch \
 "
 
 inherit deploy
@@ -22,6 +23,8 @@ do_compile() {
                 BOARD="RZFIVE_SMARC";
         elif [ "${MACHINE}" = "rzfive-dev" ]; then
                 BOARD="RZFIVE_13MMSQ_DEV";
+        elif [ "${MACHINE}" = "rzfive-tinker-v" ]; then
+                BOARD="TINKER_V";
         fi
         cd ${S}
 
